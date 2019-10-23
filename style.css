@@ -1,13 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
-  background-color: powderblue;
+  background-color: white;
 }
 
 main {
   padding-top: 10em;
   text-align: center;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.social {
+  text-align: center;
+  padding-top: 5em;
+}
+
+.social a::before {
+  content: '';
+  display: inline-block;
+  width: 0.7em;
+}
+
+.fab {
+  color: black;
+  font-size: 30px;
+}
+
+.other-pages {
+  padding-top: 7em;
+}
+
+.other-pages a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(66, 238, 172);
 }
 
 #logo {
@@ -31,6 +59,7 @@ footer {
   text-align: center;
   background-position: 0% 0%;
   z-index: 20;
+  padding-bottom: 1em;
 }
 
 ul {
@@ -58,4 +87,69 @@ ul li a {
   top: 0;
   height: 100%;
   z-index: 10;
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 2em;
+    text-align: center;
+  }
+
+  header {
+    border-radius: 25px;
+    background: #dce1f6;
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  #logo-holder {
+    margin-bottom: 5em;
+  }
+
+  #logo {
+    border-radius: 25%;
+    display: block;
+    position: relative !important;
+    width: 100% !important;
+    margin: 0;
+  }
+
+  main,
+  section {
+    border-radius: 25px;
+    padding: 4em;
+    background: white;
+    text-align: center;
+    background: #dce1f6;
+  }
+
+  nav {
+    background: none;
+  }
+
+  ul {
+    display: block;
+    margin-top: 2em;
+    position: relative !important;
+    background: none !important;
+    width: 100% !important;
+  }
+
+  ul li a {
+    font-size: 1em;
+  }
+
+  #navigation {
+    display: none;
+  }
+
+  .social a::before {
+    content: '';
+    display: block;
+    width: 0.1em;
+  }
 }
